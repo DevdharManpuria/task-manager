@@ -3,10 +3,12 @@ const Task = require("../models/Task");
 // Create a new task
 exports.createTask = async (req, res) => {
   try {
-    const { title, description } = req.body;
+    const { title, description, dueDate, priority } = req.body;
     const task = await Task.create({
       title,
       description,
+      dueDate,
+      priority,
       owner: req.user.id
     });
     res.status(201).json(task);
@@ -29,7 +31,8 @@ exports.getTasks = async (req, res) => {
 exports.updateTask = async (req, res) => {
   try {
     const { id } = req.params;
-    const updates = req.body;
+    const { title, description, completed, dueDate, priority } = req.body;
+    const updates = { title, description, completed, dueDate, priority };
     const task = await Task.findOneAndUpdate(
       { _id: id, owner: req.user.id },
       updates,

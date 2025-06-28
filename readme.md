@@ -1,111 +1,113 @@
 # 📝 Task Manager App
 
-A full-stack MERN (MongoDB, Express, React, Node.js) Task Manager app for organizing, tracking, and managing your daily tasks efficiently 🚀
+A full-stack **Task Manager** built with the **MERN stack**. Easily manage your tasks with **authentication**, **due dates**, and **priority levels**.
+
+[🚀 Live Demo (Coming Soon)](https://your-deployment-link.com)
 
 ---
 
-## 📦 Tech Stack
-
-**Frontend** (Coming soon):
-- ⚛️ React
-- 🎨 Tailwind CSS
-
-**Backend**:
-- 🟢 Node.js
-- 🌐 Express
-- 🍃 MongoDB Atlas
-- 🔐 JWT Auth + Bcrypt
-- 🧪 Thunder Client (for API testing)
+![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Made with ❤️ by Devdhar](https://img.shields.io/badge/Made%20by-DevdharManpuria-red)
 
 ---
 
-## 🔒 Features
+## 👨‍💻 Author
 
-- ✅ User Registration & Login (with JWT)
-- 🔑 Protected Routes (token-based auth)
-- 🗃️ Create / Read / Update / Delete tasks
-- 📌 Task completion toggle
-- 🧑‍💻 Built and tested with Thunder Client
+**Devdhar Manpuria**  
+🔗 [GitHub Profile](https://github.com/DevdharManpuria)
 
 ---
 
-## ⚙️ Setup Instructions
+## 📌 Features
 
-### 1️⃣ Clone the repo
-
-```bash
-git clone https://github.com/your-username/task-manager-app.git
-cd task-manager-app
-```
-
-### 2️⃣ Backend Setup
-
-```bash
-cd server
-npm install
-```
-
-#### 🔐 Create a `.env` file inside `/server`:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=supersecretkey
-```
-
-### 3️⃣ Run the server
-
-```bash
-npm run dev
-```
-
-Server will be up at: `http://localhost:5000`
+- 🔐 JWT Authentication
+- 🗃️ Task Create / Read / Update / Delete
+- 📅 Add due dates & 🔺 priorities
+- 📦 MongoDB Atlas integration
+- 🔒 Hashed passwords with bcrypt
+- 💾 Token-based session via localStorage
+- 🧠 Clean & minimal React frontend
 
 ---
 
-## 🔧 API Endpoints
+## ⚙️ Technologies Used
 
-| Method | Endpoint             | Description           | Protected |
-|--------|----------------------|-----------------------|-----------|
-| POST   | /api/auth/register   | Register user         | ❌        |
-| POST   | /api/auth/login      | Login user            | ❌        |
-| GET    | /api/auth/profile    | Get logged in user    | ✅        |
-| POST   | /api/tasks           | Create new task       | ✅        |
-| GET    | /api/tasks           | Get all tasks         | ✅        |
-| PUT    | /api/tasks/:id       | Update task (e.g., mark completed) | ✅ |
-| DELETE | /api/tasks/:id       | Delete task           | ✅        |
+### 🧭 Frontend (React)
+- React 18+
+- Axios
+- React Router
+- Context API
+
+### 🔧 Backend (Node.js / Express)
+- Express
+- MongoDB Atlas
+- Mongoose
+- Bcrypt
+- JSON Web Tokens (JWT)
+- dotenv
 
 ---
 
-## 📂 Folder Structure
+## 🗂️ Folder Structure
 
 ```
 task-manager-app/
-├── client/            # Frontend (React - coming soon)
-└── server/            # Backend
-    ├── controllers/   # Route logic (auth, tasks)
-    ├── middleware/    # Auth middleware
-    ├── models/        # Mongoose models
-    ├── routes/        # Express route files
-    ├── .env           # Env variables
-    ├── index.js       # Entry point
+├── client/          # React frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   └── services/
+│   └── public/
+├── server/          # Node.js + Express backend
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── index.js
+├── .env
+├── package.json
+└── README.md
 ```
 
 ---
 
-## 🔥 Status
+## 📆 Progress Tracker
 
-✅ **Backend is complete** (Auth, CRUD)
-🛠️ **Frontend development begins on Day 2**
+| Day        | Tasks Completed                                       |
+|------------|--------------------------------------------------------|
+| ✅ Day 1   | Backend setup, MongoDB, JWT Auth, CRUD, GitHub         |
+| ✅ Day 2   | React setup, Login/Register, Task UI, due date, priority |
+| 🔜 Day 3   | UI polish, form validation, error banners              |
+| 🔜 Day 4   | Add sorting toggle, filters, better mobile view        |
+| 🔜 Day 5   | Deployment (Render + Vercel), final polish             |
 
 ---
 
-## ✨ Credits
+## 🧪 Screenshots
 
-Made with ❤️ by [Devdhar](https://github.com/DevdharManpuria)
+> *You can add these later for visual impact*
+
+```
+📌 Register Page  📌 Task List with Date & Priority
+📌 Mobile Responsive Layout
+```
 
 ---
 
-## 🪪 License
+## 🔮 Upcoming Features
 
-This project is open source and available under the [MIT License](LICENSE).
+- 🔔 Task reminders via email
+- 📊 Analytics & completion charts
+- 🎨 UI revamp using Tailwind
+- 🌍 Deploy with Vercel (frontend) + Render (backend)
+
+---
+
+## 📜 License
+
+Licensed under the [MIT License](https://opensource.org/licenses/MIT)  
+© 2025 [Devdhar Manpuria](https://github.com/DevdharManpuria)
+
+---

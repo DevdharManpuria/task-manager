@@ -4,6 +4,12 @@ const taskSchema = new mongoose.Schema({
   title:       { type: String, required: [true, "Please provide a title"] },
   description: { type: String, default: "" },
   completed:   { type: Boolean, default: false },
+  dueDate:     { type: Date },                                    // ← new
+  priority:    { 
+    type: String, 
+    enum: ["Low", "Medium", "High"], 
+    default: "Medium" 
+  },              
   owner:       { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }
 }, { timestamps: true });
 
